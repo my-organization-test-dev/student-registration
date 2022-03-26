@@ -19,7 +19,7 @@
             <input type="text" formControlName="firstName">
 
             <div class="error" *ngIf="(studentFormControls.firstName.touched || submitted) 
-            &&  studentFormControls.firstName.errors?.required ">
+            &&  studentFormControls.firstName?.errors?.required ">
                 first name is required
             </div>
         </div>
@@ -29,7 +29,7 @@
             <input type="text" formControlName="lastName">
 
             <div class="error" *ngIf="(studentFormControls.lastName.touched || submitted) 
-            &&  studentFormControls.lastName.errors?.required ">
+            &&  studentFormControls.lastName?.errors?.required ">
                 last name is required
             </div>
         </div>
@@ -43,7 +43,7 @@
             </select>
 
             <div class="error" *ngIf="(studentFormControls.department.touched || submitted) 
-            &&  studentFormControls.department.errors?.required ">
+            &&  studentFormControls.department?.errors?.required ">
                 department is required
             </div>
         </div>
@@ -54,21 +54,21 @@
                     <input formControlName="email" type="email">
                 </div>
 
-                <div class="error" *ngIf="(studentFormControls.address.controls.email.touched || submitted) 
-            &&  studentFormControls.address.controls.email.errors?.required ">
+                <div class="error" *ngIf="(studentFormAddressControls?.controls?.email.touched || submitted) 
+            &&  studentFormAddressControls?.controls?.email?.errors?.required ">
                     email is required
                 </div>
 
-                <div class="error" *ngIf="(studentFormControls.address.controls.email.touched || submitted) 
-                &&  studentFormControls.address.controls.email.errors?.email ">
+                <div class="error" *ngIf="(studentFormAddressControls?.controls?.email.touched || submitted) 
+                &&  studentFormAddressControls?.controls?.email?.errors?.email ">
                     email is required
                 </div>
                 <div>
                     <label for="phone">Phone Number</label>
                     <input formControlName="phoneNumber" type="text">
 
-                    <div class="error" *ngIf="(studentFormControls.address.controls.phoneNumber.touched || submitted) 
-                    &&  studentFormControls.address.controls.phoneNumber.errors?.required ">
+                    <div class="error" *ngIf="(studentFormAddressControls?.controls?.phoneNumber.touched || submitted) 
+                    &&  studentFormAddressControls?.controls?.phoneNumber?.errors?.required ">
                         phone number is required
                     </div>
                 </div>
@@ -77,8 +77,8 @@
                     <label for="city">City</label>
                     <input formControlName="city" type="text">
 
-                    <div class="error" *ngIf="(studentFormControls.address.controls.city.touched || submitted) 
-                    &&  studentFormControls.address.controls.city.errors?.required ">
+                    <div class="error" *ngIf="(studentFormAddressControls?.controls?.city.touched || submitted) 
+                    &&  studentFormAddressControls?.controls?.city?.errors?.required ">
                         city is required
                     </div>
                 </div>
@@ -87,8 +87,8 @@
                     <label for="subCity">Sub City</label>
                     <input formControlName="subCity" type="text">
 
-                    <div class="error" *ngIf="(studentFormControls.address.controls.subCity.touched || submitted) 
-                    &&  studentFormControls.address.controls.subCity.errors?.required ">
+                    <div class="error" *ngIf="(studentFormAddressControls?.controls?.subCity.touched || submitted) 
+                    &&  studentFormAddressControls?.controls?.subCity?.errors?.required ">
                         sub city is required
                     </div>
                 </div>

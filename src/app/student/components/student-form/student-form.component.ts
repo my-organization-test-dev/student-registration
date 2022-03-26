@@ -8,7 +8,7 @@ import {
   OnChanges,
   SimpleChanges,
 } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Student } from '../../model/student';
 
 @Component({
@@ -58,6 +58,10 @@ export class StudentFormComponent implements OnInit, OnChanges {
 
   get studentFormControls() {
     return this.studentForm.controls;
+  }
+
+  get studentFormAddressControls() {
+    return this.studentForm.get('address') as FormArray;
   }
   onSave(): void {
     //! to upload student profile to the server use FormData  like below

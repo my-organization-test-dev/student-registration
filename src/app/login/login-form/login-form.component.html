@@ -9,12 +9,12 @@
 
 
             <div class="error" *ngIf="(LoginFormControls.userName.touched || submitted) 
-    &&  LoginFormControls.userName.errors?.required ">
+    &&  LoginFormControls.userName?.errors?.required ">
                 User Name is required
             </div>
 
             <div class="error" *ngIf="(LoginFormControls.userName.touched || submitted) 
-    &&  LoginFormControls.userName.errors?.email ">
+    &&  LoginFormControls.userName?.errors?.email ">
                 invalid email
             </div>
 
@@ -25,12 +25,12 @@
             <input formControlName="password" type="password" placeholder="Enter Password" name="psw" required>
 
             <div class="error" *ngIf="(LoginFormControls.password.touched || submitted) 
-            &&  LoginFormControls.password.errors?.required ">
+            &&  LoginFormControls?.password.errors?.required ">
                 Password is required
             </div>
 
             <div class="error" *ngIf="(LoginFormControls.password.touched || submitted) 
-            &&  LoginFormControls.password.errors?.minlength ">
+            &&  LoginFormControls.password?.errors?.minlength ">
                 minimum length must be 6
             </div>
 
