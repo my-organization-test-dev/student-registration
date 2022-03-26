@@ -1,0 +1,44 @@
+<form [formGroup]="loginForm">
+
+
+    <div class="container">
+
+        <div class="items">
+            <label for="uname"><b>Username</b></label>
+            <input required type="text" formControlName="userName" placeholder="Enter Username" required>
+
+
+            <div class="error" *ngIf="(LoginFormControls.userName.touched || submitted) 
+    &&  LoginFormControls.userName.errors?.required ">
+                User Name is required
+            </div>
+
+            <div class="error" *ngIf="(LoginFormControls.userName.touched || submitted) 
+    &&  LoginFormControls.userName.errors?.email ">
+                invalid email
+            </div>
+
+
+
+
+            <label for="psw"><b>Password</b></label>
+            <input formControlName="password" type="password" placeholder="Enter Password" name="psw" required>
+
+            <div class="error" *ngIf="(LoginFormControls.password.touched || submitted) 
+            &&  LoginFormControls.password.errors?.required ">
+                Password is required
+            </div>
+
+            <div class="error" *ngIf="(LoginFormControls.password.touched || submitted) 
+            &&  LoginFormControls.password.errors?.minlength ">
+                minimum length must be 6
+            </div>
+
+            <span style="color: brown;" *ngIf="message==='unauthorized'">invalid username or password</span>
+
+            <button (click)="onLogin()">Login</button>
+        </div>
+
+    </div>
+
+</form>

@@ -1,0 +1,64 @@
+input[type=text], select,input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+   cursor: pointer;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.2s;
+   }
+.button-container{
+    display: flex;
+    
+}
+
+.button-container button{
+  margin: 4px;
+    
+}
+.button-delete{
+    background-color: red;
+}
+.button-update{
+    background-color: rgb(50, 33, 146);
+}
+
+
+.close{
+    float: right;
+    background-color: white;
+    border: 3px solid;
+    border-width: thin;
+    border-color: rgb(226, 220, 220);
+}
+.close a{
+   text-decoration: none;
+   color: black;
+}
+
+.img-container{
+
+    padding: 0 50%;
+
+}
+img{
+    border-radius: 50%;
+}
+
+.error{
+    color: red;
+  }

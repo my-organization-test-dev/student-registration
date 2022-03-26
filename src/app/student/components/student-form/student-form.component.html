@@ -1,0 +1,104 @@
+<div>
+    <button class="close"><a href="/students">Close</a></button>
+</div>
+<div class="img-container">
+    <div class="">
+        <img width="100" height="100" [src]="imageUrl" alt="">
+    </div>
+
+    <div>
+        <input multiple="false" type="file" accept="image/*" (change)="handleInputImage($event)">
+    </div>
+</div>
+<div>
+    <form [formGroup]="studentForm">
+
+        <div>
+            <label for="fname">First Name</label>
+
+            <input type="text" formControlName="firstName">
+
+            <div class="error" *ngIf="(studentFormControls.firstName.touched || submitted) 
+            &&  studentFormControls.firstName.errors?.required ">
+                first name is required
+            </div>
+        </div>
+        <div>
+            <label for="lname">Last Name</label>
+
+            <input type="text" formControlName="lastName">
+
+            <div class="error" *ngIf="(studentFormControls.lastName.touched || submitted) 
+            &&  studentFormControls.lastName.errors?.required ">
+                last name is required
+            </div>
+        </div>
+        <div>
+            <label for="dep">Department</label>
+
+            <select formControlName="department" id="">
+                <option value="CS" label="CS"></option>
+                <option>SW</option>
+                <option>IT</option>
+            </select>
+
+            <div class="error" *ngIf="(studentFormControls.department.touched || submitted) 
+            &&  studentFormControls.department.errors?.required ">
+                department is required
+            </div>
+        </div>
+        <div>
+            <div formGroupName="address">
+                <div>
+                    <label for="email">Email</label>
+                    <input formControlName="email" type="email">
+                </div>
+
+                <div class="error" *ngIf="(studentFormControls.address.controls.email.touched || submitted) 
+            &&  studentFormControls.address.controls.email.errors?.required ">
+                    email is required
+                </div>
+
+                <div class="error" *ngIf="(studentFormControls.address.controls.email.touched || submitted) 
+                &&  studentFormControls.address.controls.email.errors?.email ">
+                    email is required
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input formControlName="phoneNumber" type="text">
+
+                    <div class="error" *ngIf="(studentFormControls.address.controls.phoneNumber.touched || submitted) 
+                    &&  studentFormControls.address.controls.phoneNumber.errors?.required ">
+                        phone number is required
+                    </div>
+                </div>
+
+                <div>
+                    <label for="city">City</label>
+                    <input formControlName="city" type="text">
+
+                    <div class="error" *ngIf="(studentFormControls.address.controls.city.touched || submitted) 
+                    &&  studentFormControls.address.controls.city.errors?.required ">
+                        city is required
+                    </div>
+                </div>
+
+                <div>
+                    <label for="subCity">Sub City</label>
+                    <input formControlName="subCity" type="text">
+
+                    <div class="error" *ngIf="(studentFormControls.address.controls.subCity.touched || submitted) 
+                    &&  studentFormControls.address.controls.subCity.errors?.required ">
+                        sub city is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button (click)="onSave()" type="button">Save</button>
+            <button class="button-update" (click)="onUpdate()" type="button">Update</button>
+            <button class="button-delete" (click)="onDelete()" type="button">Delete</button>
+        </div>
+    </form>
+</div>

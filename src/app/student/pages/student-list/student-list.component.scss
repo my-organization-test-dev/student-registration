@@ -1,0 +1,120 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  thead{
+    background-color: rgb(225, 243, 243);
+  }
+  td, th {
+    text-align: left;
+    padding: 8px;
+  }
+  tr{
+    border: 1px solid #dddddd;
+
+  }
+  
+  tr:nth-child(even) {
+    background-color: white;
+  }
+
+  .container{
+    display: flex;
+    margin: 16px;
+  
+  }
+
+  .full{
+    width: 100%;
+  }
+
+  .half{
+    width: 75%;
+    margin-left: 2%;
+    border: solid;
+    border-color: rgb(195, 216, 216);
+    border-width: thin;
+    padding: 1%;
+  }
+
+  .half-list{
+    width: 25%;
+  }
+  
+  .action{
+text-decoration: none;
+color: black;
+cursor: pointer;
+  }
+
+  img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  button {
+    cursor: pointer;
+     background: royalblue;
+     color: white;
+     padding: 0.7em 1em;
+     padding-left: 0.9em;
+     display: flex;
+     align-items: center;
+     border: none;
+     border-radius: 4px;
+     overflow: hidden;
+     transition: all 0.2s;
+    }
+
+  .newButton{
+    float: right;
+    margin-bottom: 6px;
+  }
+  .newButton a{
+   text-decoration: none;
+   color: white;
+  }
+
+
+.search-continer{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+  .search {
+    width: 75%;
+    position: relative;
+    display: flex;
+  
+  }
+  
+  .searchTerm {
+    width: 50%;
+    border: 3px solid #00B4CC;
+    border-width: thin;
+    padding: 5px;
+    margin: 2px;
+    float: right;
+    margin-bottom: 1px;
+    height: 20px;
+    border-radius: 5px ;
+    outline: none;
+  
+  }
+
+  .img-container{
+    display: flex;
+   gap: 10px;
+    align-items: center;
+  }
+.detail{
+ display: flex;
+ justify-content: end;
+  opacity: 0;
+}
+  .group:hover .detail{
+  
+    opacity: 1;
+  }

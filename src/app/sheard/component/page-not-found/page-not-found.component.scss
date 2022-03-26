@@ -1,0 +1,23 @@
+.container {
+    height: 100vh;
+    padding: 0 30%;
+  
+  }
+  
+  .items{
+      padding-top: 25%;
+  }
+
+  button {
+    cursor: pointer;
+     background: royalblue;
+     color: white;
+     padding: 0.7em 1em;
+     padding-left: 0.9em;
+     display: flex;
+     align-items: center;
+     border: none;
+     border-radius: 4px;
+     overflow: hidden;
+     transition: all 0.2s;
+    }

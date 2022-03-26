@@ -1,0 +1,27 @@
+<header>
+    <nav class="navbar">
+        <a href="#" class="logo">Student</a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+            </li>
+
+            <li class="nav-item">
+                <a style="cursor: pointer;" (click)="onLogout()" class="nav-link">Logout</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+
+<router-outlet></router-outlet>

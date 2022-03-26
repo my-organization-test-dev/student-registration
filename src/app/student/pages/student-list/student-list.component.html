@@ -1,0 +1,71 @@
+<div class="container">
+    <div [ngClass]=" viewMode=='list' ? 'full' : 'half-list' ">
+
+        <div *ngIf="viewMode==='list'" class="search-continer">
+
+            <div class="search">
+                <input (keyup)="onSearch($event.target.value)" type="text" class="searchTerm"
+                    placeholder="What are you looking for?">
+
+            </div>
+            <div class="new-button-container">
+                <button class="newButton"> <a href="students/new">
+
+                        New
+                    </a></button>
+            </div>
+        </div>
+        <div style="background-color: aliceblue;">
+            <table>
+                <thead>
+                    <tr *ngIf="viewMode=='list'">
+                        <th>Name</th>
+                        <th>email</th>
+                        <th>Phone</th>
+                        <th>Department</th>
+                        <th colspan="1"></th>
+                    </tr>
+
+                    <tr *ngIf="viewMode=='detail'">
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="group" *ngFor="let item of (students$ |async)">
+                        <td *ngIf="viewMode=='detail'">
+                            <a class="action" href="students/detail/{{item.id}}">{{item.firstName}}
+                                {{item.lastName}}</a>
+                        </td>
+                        <td *ngIf="viewMode=='list'">
+                            <div class="img-container">
+                                <div> <img src="../../../../assets//images/user.png" alt="">
+                                </div>
+                                <div> {{item.firstName}} {{item.lastName}}</div>
+                            </div>
+                        </td>
+                        <td *ngIf="viewMode=='list'">{{item.address.email}}</td>
+                        <td *ngIf="viewMode=='list'">{{item.address.phoneNumber}}</td>
+                        <td *ngIf="viewMode=='list'">{{item.department}}</td>
+
+                        <td>
+
+                            <a class="detail" href="students/detail/{{item.id}}">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <polyline points="9 6 15 12 9 18"></polyline>
+                                </svg>
+                            </a>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div *ngIf="viewMode=='detail'" class="half">
+        <router-outlet></router-outlet>
+    </div>
+</div>
