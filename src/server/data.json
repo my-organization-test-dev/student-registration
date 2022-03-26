@@ -1,30 +1,6 @@
 {
   "students": [
     {
-      "id": "ngXpBYe",
-      "firstName": "shanbel",
-      "lastName": "kassa",
-      "department": "CS",
-      "address": {
-        "email": "shanbelkassa12@gmail.com",
-        "phoneNumber": null,
-        "city": null,
-        "subCity": null
-      }
-    },
-    {
-      "id": "0YL-4w0",
-      "firstName": "shanbel",
-      "lastName": "kassa",
-      "department": "IT",
-      "address": {
-        "email": "shanbelkassa12@gmail.com",
-        "phoneNumber": "0960844285",
-        "city": "Addis Ababa",
-        "subCity": null
-      }
-    },
-    {
       "id": "mEQOhdT",
       "firstName": "shanbel",
       "lastName": "kassa",
@@ -37,26 +13,25 @@
       }
     },
     {
-      "id": "yCPQxml",
-      "firstName": "shanbel",
-      "lastName": "fentie",
-      "department": "CS",
+      "id": "KSWOTls",
+      "firstName": "Aster",
+      "lastName": "yohannes",
+      "department": "SW",
       "address": {
         "email": "shanbelkassa12@gmail.com",
         "phoneNumber": "0960844285",
         "city": "Addis Ababa",
         "subCity": "Addis Ababa"
-      },
-      "fileName": "1639657979965.jpg"
+      }
     },
     {
-      "id": "KSWOTls",
-      "firstName": "shanbel",
-      "lastName": "kassa",
+      "id": "ANJASzw",
+      "firstName": "Abebe",
+      "lastName": "Alemu",
       "department": "SW",
       "address": {
-        "email": "shanbelkassa12@gmail.com",
-        "phoneNumber": "0960844285",
+        "email": "abebe@gmail.com",
+        "phoneNumber": "0932658974",
         "city": "Addis Ababa",
         "subCity": "Addis Ababa"
       }
